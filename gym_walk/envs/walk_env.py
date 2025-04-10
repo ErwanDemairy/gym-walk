@@ -55,9 +55,9 @@ class WalkEnv(gym.Env):
 
                 # Transition probabilities
                 self.P[s][a] = [
-                    (p_forward, s_forward, r_forward, d_forward),
+                    (p_forward, int(s_forward), r_forward, bool(d_forward)),
                     (p_stay, s, 0.0, s in [0, nS - 1]),
-                    (p_backward, s_backward, r_backward, d_backward),
+                    (p_backward, int(s_backward), r_backward, bool(d_backward)),
                 ]
 
                 # Validate probabilities sum to 1.0
