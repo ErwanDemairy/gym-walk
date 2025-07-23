@@ -1,22 +1,3 @@
-# gym-walk
-
-## Installation
-
-```bash
-git clone https://github.com/ErwanDemairy/gym-walk.git
-cd gym-walk
-pip install .
-```
-
-or:
-
-```bash
-pip install git+https://github.com/ErwanDemairy/gym-walk#egg=gym-walk
-```
-
-## Use
-
-```python
 import gymnasium as gym
 import gym_walk, numpy as np
 env = gym.make('WalkFive-v0')
@@ -43,5 +24,3 @@ def td(pi, env, gamma=1.0, alpha=0.01, n_episodes=100000):
 
 V = td(pi, env)
 V
-
-```
