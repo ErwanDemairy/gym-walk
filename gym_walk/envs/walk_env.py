@@ -97,6 +97,7 @@ class WalkEnv(gym.Env):
         else:
             info["success"] = False
 
+        self.render()
         return int(s), r, terminated, False, info
 
     def reset(self, *, seed: Optional[int] = None, options: Optional[dict] = None):
